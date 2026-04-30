@@ -27,44 +27,116 @@ export default function App() {
     },
     {
       icon: Monitor,
-      title: "Diseño Web",
-      description: "Desarrollamos sitios web modernos, responsivos y optimizados que convierten visitantes en clientes.",
-      features: ["Sitios web corporativos", "E-commerce", "Landing pages", "Aplicaciones web"]
+      title: "Web y Animación",
+      description: "Desarrollamos sitios web modernos, responsivos y optimizados, complementados con animaciones que dan vida a tu marca.",
+      features: ["Sitios web corporativos", "E-commerce", "Landing pages", "Animaciones digitales"]
     }
   ];
 
-  const portfolio = [
-    {
-      image: "https://images.unsplash.com/photo-1748326650737-33500fdfda30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-      title: "Desarrollo de Logo",
-      category: "Diseño Gráfico"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1766239303199-b45e6bcdc901?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-      title: "Revista y Catálogo",
-      category: "Diseño Editorial"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1697301439916-89153ae8bbd9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-      title: "Fotografía de Producto",
-      category: "Fotografía"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1772272935464-2e90d8218987?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-      title: "Diseño de Interfaz",
-      category: "Diseño Web"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1775737599962-fa2f0db12e4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-      title: "Identidad Corporativa",
-      category: "Diseño Gráfico"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1611149974482-764b0c2a211a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-      title: "Fotografía Comercial",
-      category: "Fotografía"
-    }
-  ];
+  const portfolioCategories = {
+    "Diseño Gráfico": [
+      {
+        image: "https://images.unsplash.com/photo-1748326650737-33500fdfda30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Desarrollo de Logo",
+        description: "Identidad de marca"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1775737599962-fa2f0db12e4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Identidad Corporativa",
+        description: "Branding completo"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1614036634955-ae5e90f9b9eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Diseño de Empaque",
+        description: "Packaging profesional"
+      }
+    ],
+    "Diseño Editorial": [
+      {
+        image: "https://images.unsplash.com/photo-1766239303199-b45e6bcdc901?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Revista Corporativa",
+        description: "Diseño editorial completo"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1643485839726-c9d4fac1c9bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Catálogo de Productos",
+        description: "Diagramación y maquetación"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1622020934415-9f549755a7bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Manual Corporativo",
+        description: "Identidad editorial"
+      }
+    ],
+    "Fotografía": [
+      {
+        image: "https://images.unsplash.com/photo-1697301439916-89153ae8bbd9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Fotografía de Producto",
+        description: "Sesión comercial"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1611149974482-764b0c2a211a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Fotografía Publicitaria",
+        description: "Campaña comercial"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1682078234868-412ec5566118?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Fotografía Corporativa",
+        description: "Sesión empresarial"
+      }
+    ],
+    "Web y Animación": [
+      {
+        image: "https://images.unsplash.com/photo-1772272935464-2e90d8218987?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Diseño de Sitio Web",
+        description: "Sitio corporativo"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "E-commerce",
+        description: "Tienda online"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1624225322963-a453470735c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Animaciones Digitales",
+        description: "Motion graphics"
+      }
+    ],
+    "Impresión": [
+      {
+        image: "https://images.unsplash.com/photo-1758183961426-88d64eb5f787?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Impresión Offset",
+        description: "Alta calidad litográfica"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1745845289797-913815100704?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Impresión Tipográfica",
+        description: "Técnica artesanal"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1625820104062-387167dd655b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Impresión Digital",
+        description: "Tirajes cortos"
+      }
+    ],
+    "Terminados": [
+      {
+        image: "https://images.unsplash.com/photo-1700887913623-979f688ac56a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Troquelado",
+        description: "Cortes especiales"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1768902406144-a348c559c73c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Encuadernación",
+        description: "Técnicas artesanales"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1758183961426-88d64eb5f787?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+        title: "Acabados UV",
+        description: "Barniz UV y laminado"
+      }
+    ]
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -80,6 +152,7 @@ export default function App() {
               <a href="#inicio" className="text-slate-700 hover:text-green-600 transition-colors">Inicio</a>
               <a href="#servicios" className="text-slate-700 hover:text-green-600 transition-colors">Servicios</a>
               <a href="#portfolio" className="text-slate-700 hover:text-green-600 transition-colors">Portfolio</a>
+              <a href="#grupo" className="text-slate-700 hover:text-green-600 transition-colors">Grupo Corporativo</a>
               <a href="#nosotros" className="text-slate-700 hover:text-green-600 transition-colors">Nosotros</a>
               <a href="#contacto" className="bg-gradient-to-r from-green-600 to-green-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all">
                 Contacto
@@ -102,6 +175,7 @@ export default function App() {
               <a href="#inicio" className="block text-slate-700 hover:text-green-600 py-2">Inicio</a>
               <a href="#servicios" className="block text-slate-700 hover:text-green-600 py-2">Servicios</a>
               <a href="#portfolio" className="block text-slate-700 hover:text-green-600 py-2">Portfolio</a>
+              <a href="#grupo" className="block text-slate-700 hover:text-green-600 py-2">Grupo Corporativo</a>
               <a href="#nosotros" className="block text-slate-700 hover:text-green-600 py-2">Nosotros</a>
               <a href="#contacto" className="block bg-gradient-to-r from-green-600 to-green-500 text-white px-6 py-2 rounded-full text-center">Contacto</a>
             </div>
@@ -190,28 +264,209 @@ export default function App() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">Portfolio</h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Descubre algunos de nuestros proyectos más creativos y exitosos
+              Explora nuestros proyectos organizados por categoría
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {portfolio.map((item, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all cursor-pointer hover:-translate-y-2">
-                <div className="aspect-[4/3]">
-                  <ImageWithFallback
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-green-900/90 via-green-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <div className="text-sm text-green-300 mb-2">{item.category}</div>
-                    <div className="text-xl font-semibold">{item.title}</div>
-                  </div>
+          <div className="space-y-16">
+            {Object.entries(portfolioCategories).map(([category, projects], catIndex) => (
+              <div key={catIndex}>
+                <h3 className="text-2xl font-bold text-slate-900 mb-8 pb-3 border-b-2 border-green-600">
+                  {category}
+                </h3>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {projects.map((item, index) => (
+                    <div key={index} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all cursor-pointer hover:-translate-y-2">
+                      <div className="aspect-[4/3]">
+                        <ImageWithFallback
+                          src={item.image}
+                          alt={item.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-green-900/90 via-green-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                          <div className="text-sm text-green-300 mb-1">{item.description}</div>
+                          <div className="text-xl font-semibold">{item.title}</div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Grupo Corporativo Section */}
+      <section id="grupo" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Grupo Corporativo de Impresión y Diseño</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-6">
+              Soluciones gráficas integrales
+            </p>
+            <p className="text-lg text-slate-400 max-w-4xl mx-auto">
+              Somos un grupo empresarial que integra diferentes marcas especializadas del sector gráfico,
+              uniendo estrategia, creatividad, diseño, impresión y producción en un solo ecosistema profesional.
+            </p>
+          </div>
+
+          <div className="mb-16 text-center">
+            <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+              Nuestro enfoque es ofrecer a empresas y emprendimientos soluciones gráficas completas,
+              optimizando tiempos, costos y calidad, desde la conceptualización hasta la entrega final.
+            </p>
+          </div>
+
+          <h3 className="text-2xl font-bold mb-8 text-center">Empresas del Grupo</h3>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Brillos de Luna Litografía */}
+            <div className="bg-slate-800 p-8 rounded-2xl hover:bg-slate-700 transition-colors">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-green-500 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3">Brillos de Luna Litografía</h3>
+              <p className="text-slate-400 text-sm mb-4">Impresión litográfica y acabados de alta calidad</p>
+              <ul className="space-y-2 text-slate-300 text-sm">
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Impresión litográfica en GTO bicolor</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Troquelado de pliego menor</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Laminado mate y brillante</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Brillo UV y reserva</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Terminados litográficos</span>
+                </li>
+              </ul>
+              <p className="text-green-400 text-sm mt-4">👉 Producción editorial y comercial con acabados de alta calidad</p>
+            </div>
+
+            {/* JR Marquillas */}
+            <div className="bg-slate-800 p-8 rounded-2xl hover:bg-slate-700 transition-colors">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-green-500 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-3">JR Marquillas</h3>
+              <p className="text-slate-400 text-sm mb-4">Marquillas y etiquetas para la industria textil y comercial</p>
+              <ul className="space-y-2 text-slate-300 text-sm">
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Marquillas en nylon y satín</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Etiquetas en cartón</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Estampado al calor</span>
+                </li>
+              </ul>
+              <p className="text-green-400 text-sm mt-4">👉 Ideal para industria textil, marcas de ropa y productos comerciales</p>
+            </div>
+
+            {/* Imago Fotodiseño */}
+            <div className="bg-slate-800 p-8 rounded-2xl hover:bg-slate-700 transition-colors border-2 border-green-600">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-green-500 rounded-xl flex items-center justify-center mb-6">
+                <Palette className="w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Imago Fotodiseño</h3>
+              <p className="text-slate-400 text-sm mb-4">Diseño gráfico, diseño web y fotografía profesional</p>
+              <ul className="space-y-2 text-slate-300 text-sm">
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Diseño gráfico profesional</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Diseño editorial</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Diseño web</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ChevronRight className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                  <span>Fotografía profesional</span>
+                </li>
+              </ul>
+              <p className="text-green-400 text-sm mt-4">👉 Desarrollo visual estratégico para marcas y empresas</p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-green-900/50 to-green-800/50 p-8 rounded-2xl mb-12">
+            <h3 className="text-2xl font-bold mb-6 text-center">¿Por qué trabajar con nuestro grupo?</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="flex items-start gap-3">
+                <div className="text-green-400 text-xl">✔</div>
+                <div>
+                  <h4 className="font-semibold mb-1">Un solo equipo para todo tu proyecto gráfico</h4>
+                  <p className="text-slate-300 text-sm">Gestión integral sin intermediarios</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="text-green-400 text-xl">✔</div>
+                <div>
+                  <h4 className="font-semibold mb-1">Integración entre diseño y producción</h4>
+                  <p className="text-slate-300 text-sm">Flujo de trabajo optimizado</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="text-green-400 text-xl">✔</div>
+                <div>
+                  <h4 className="font-semibold mb-1">Optimización de tiempos y costos</h4>
+                  <p className="text-slate-300 text-sm">Mayor eficiencia en cada etapa</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="text-green-400 text-xl">✔</div>
+                <div>
+                  <h4 className="font-semibold mb-1">Control de calidad en cada etapa</h4>
+                  <p className="text-slate-300 text-sm">Supervisión profesional continua</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="text-green-400 text-xl">✔</div>
+                <div>
+                  <h4 className="font-semibold mb-1">Asesoría profesional continua</h4>
+                  <p className="text-slate-300 text-sm">Acompañamiento en todo momento</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="text-green-400 text-xl">✔</div>
+                <div>
+                  <h4 className="font-semibold mb-1">Resultados coherentes y funcionales</h4>
+                  <p className="text-slate-300 text-sm">Visión completa del proyecto</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center bg-slate-800 p-8 rounded-2xl">
+            <h3 className="text-xl font-bold mb-4">Nuestro Valor Diferencial</h3>
+            <p className="text-slate-300 max-w-3xl mx-auto">
+              A diferencia de trabajar con proveedores independientes, el <strong>Grupo Corporativo de Impresión y Diseño</strong> ofrece
+              un flujo de trabajo integrado, donde cada área entiende el proyecto como un todo y no como una pieza aislada.
+              Esto se traduce en mejores resultados visuales, técnicos y comerciales para nuestros clientes.
+            </p>
           </div>
         </div>
       </section>
@@ -381,8 +636,8 @@ export default function App() {
               <ul className="space-y-2 text-slate-400">
                 <li><a href="#servicios" className="hover:text-green-400 transition-colors">Diseño Gráfico</a></li>
                 <li><a href="#servicios" className="hover:text-green-400 transition-colors">Diseño Editorial</a></li>
-                <li><a href="#servicios" className="hover:text-green-400 transition-colors">Fotografía Publicitaria</a></li>
-                <li><a href="#servicios" className="hover:text-green-400 transition-colors">Diseño Web</a></li>
+                <li><a href="#servicios" className="hover:text-green-400 transition-colors">Fotografía</a></li>
+                <li><a href="#servicios" className="hover:text-green-400 transition-colors">Web y Animación</a></li>
               </ul>
             </div>
 
@@ -390,6 +645,7 @@ export default function App() {
               <h3 className="font-semibold mb-4">Empresa</h3>
               <ul className="space-y-2 text-slate-400">
                 <li><a href="#nosotros" className="hover:text-green-400 transition-colors">Sobre Nosotros</a></li>
+                <li><a href="#grupo" className="hover:text-green-400 transition-colors">Grupo Corporativo</a></li>
                 <li><a href="#portfolio" className="hover:text-green-400 transition-colors">Portfolio</a></li>
                 <li><a href="#contacto" className="hover:text-green-400 transition-colors">Contacto</a></li>
               </ul>
